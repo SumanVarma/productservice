@@ -1,0 +1,22 @@
+logging:
+    pattern:
+        console: '%d{yyyy-MM-dd HH:mm:ss} - %msg%n'
+spring:
+    datasource:
+        driverClassName: org.h2.Driver
+        password: ''
+        url: jdbc:h2:mem:spproductservice
+        username: sa
+    h2:
+        console:
+            enabled: true
+            path: /h2
+    jpa:
+        database-platform: org.hibernate.dialect.H2Dialect
+        hibernate:
+            ddl-auto: update
+        properties:
+            hibernate:
+                format_sql: true
+                generate_statistics: false
+        show-sql: true
